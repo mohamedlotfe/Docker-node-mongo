@@ -1,0 +1,19 @@
+version: '3'
+
+# same as
+# docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
+
+services:
+    app:
+        container_name: docker_node_mongo
+        restart: always
+        build: .  #same dir for dockerfile
+        ports: 
+            - '80:3000'
+        links: 
+            - mongo
+    mongo:
+        container_name: mongo
+        image: mongo  #from a docker hub
+        ports: 
+            - '27017:27017'
