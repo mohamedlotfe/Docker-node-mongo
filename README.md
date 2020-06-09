@@ -18,3 +18,4 @@ volumes: ['./:/usr/src/app']
 # To re-build
 docker-compose build
 ```
+[video](https://www.youtube.com/watch?v=hP77Rua1E0c&t=1196s)
